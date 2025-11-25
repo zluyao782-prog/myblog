@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myblog-status
+spec:
+  replicas: 1  # 状态页只需要 1 个副本
+  selector:
+    matchLabels:
+      app: myblog
+      component: status
+  template:
+    metadata:
+      labels:
+        app: myblog
+        component: status
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: status-html
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: status-html
+        configMap:
+          name: status-page

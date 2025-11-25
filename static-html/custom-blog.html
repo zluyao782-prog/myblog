@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 Kubernetes 博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        article {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        article:last-child {
+            border-bottom: none;
+        }
+        
+        article h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .meta {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .meta span {
+            margin-right: 15px;
+        }
+        
+        .meta span::before {
+            content: "📅 ";
+        }
+        
+        article p {
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-top: 10px;
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .k8s-badge {
+            background: #326ce5;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 我的 Kubernetes 博客</h1>
+            <p>基于 Kubernetes + ConfigMap 动态更新</p>
+            <span class="k8s-badge">Powered by K8s</span>
+        </header>
+        
+        <div class="content">
+            <article>
+                <h2>欢迎来到我的第一篇博客！</h2>
+                <div class="meta">
+                    <span>2025-11-25</span>
+                </div>
+                <p>
+                    今天成功地在 Kubernetes 上部署了我的第一个静态博客！这个博客使用了 Hugo 生成静态页面，
+                    然后通过 Docker 打包成镜像，最后部署到 Kubernetes 集群中。
+                </p>
+                <p>
+                    整个过程让我深刻理解了容器化部署的魅力。从本地开发到生产部署，只需要几个简单的命令，
+                    就能让应用在任何地方运行。这就是 "Build once, run anywhere" 的理念！
+                </p>
+                <div>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">DevOps</span>
+                    <span class="tag">Hugo</span>
+                </div>
+            </article>
+            
+            <article>
+                <h2>学习 ConfigMap 动态更新内容</h2>
+                <div class="meta">
+                    <span>2025-11-25</span>
+                </div>
+                <p>
+                    今天学会了如何使用 Kubernetes 的 ConfigMap 来管理配置文件。通过将 HTML 文件存储在 ConfigMap 中，
+                    我可以随时更新博客内容，而不需要重新构建 Docker 镜像！
+                </p>
+                <p>
+                    这种方式非常适合频繁更新的静态内容。只需要修改 ConfigMap，然后让 Pod 重新加载，
+                    新的内容就会立即生效。真是太方便了！
+                </p>
+                <div>
+                    <span class="tag">ConfigMap</span>
+                    <span class="tag">实战</span>
+                </div>
+            </article>
+            
+            <article>
+                <h2>下一步计划</h2>
+                <div class="meta">
+                    <span>2025-11-25</span>
+                </div>
+                <p>
+                    接下来我计划学习：
+                </p>
+                <ul style="margin-left: 20px; color: #555;">
+                    <li style="margin-bottom: 8px;">🔹 使用 Ingress 配置域名访问</li>
+                    <li style="margin-bottom: 8px;">🔹 搭建 CI/CD 流水线自动部署</li>
+                    <li style="margin-bottom: 8px;">🔹 学习 Helm 包管理工具</li>
+                    <li style="margin-bottom: 8px;">🔹 实践服务网格 Istio</li>
+                </ul>
+                <div>
+                    <span class="tag">学习计划</span>
+                </div>
+            </article>
+        </div>
+        
+        <footer>
+            <p>🌐 托管在 Kubernetes 集群 | 使用 ConfigMap 动态更新</p>
+            <p style="margin-top: 10px;">
+                <a href="https://kubernetes.io" target="_blank">Kubernetes 官网</a> | 
+                <a href="https://gohugo.io" target="_blank">Hugo 官网</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

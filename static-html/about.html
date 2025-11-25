@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 我的 K8s 博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+        nav a {
+            color: #f5576c;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background: #f5576c;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        .profile {
+            text-align: center;
+            padding: 40px;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            padding: 0 40px 40px 40px;
+        }
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f5576c;
+        }
+        .section h2 {
+            color: #f5576c;
+            margin-bottom: 15px;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skill-list li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #f5576c;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .contact-item {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">🏠 首页</a>
+        <a href="about.html">👤 关于我</a>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>👋 关于我</h1>
+            <p>一位热爱技术的 DevOps 学习者</p>
+        </header>
+        <div class="profile">
+            <div class="avatar">🚀</div>
+            <h2 style="color: #f5576c; margin-bottom: 10px;">Kubernetes 实践者</h2>
+            <p style="color: #666;">探索云原生技术的奇妙世界</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>📖 我的故事</h2>
+                <p>
+                    我是一名正在学习 Kubernetes 和 DevOps 的技术爱好者。通过实践项目来深入理解容器编排、
+                    微服务架构以及云原生技术栈。
+                </p>
+                <p style="margin-top: 10px;">
+                    这个博客就是我学习 Kubernetes 过程中的一个实战项目。从最初的 WordPress + MySQL，
+                    到现在使用 ConfigMap 管理静态网站，每一步都让我收获满满。
+                </p>
+            </div>
+            <div class="section">
+                <h2>🛠️ 技能树</h2>
+                <ul class="skill-list">
+                    <li><strong>Kubernetes</strong> - 容器编排、Service、ConfigMap、PVC</li>
+                    <li><strong>Docker</strong> - 容器化应用、多阶段构建、镜像优化</li>
+                    <li><strong>Linux</strong> - Shell 脚本、系统管理、网络配置</li>
+                    <li><strong>Web</strong> - HTML/CSS、Nginx、静态网站生成</li>
+                    <li><strong>CI/CD</strong> - 正在学习 Jenkins、GitHub Actions</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>🎯 学习目标</h2>
+                <p>接下来我计划深入学习：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li style="margin-bottom: 8px;">🔹 Helm 包管理器</li>
+                    <li style="margin-bottom: 8px;">🔹 Ingress 控制器和证书管理</li>
+                    <li style="margin-bottom: 8px;">🔹 Prometheus + Grafana 监控体系</li>
+                    <li style="margin-bottom: 8px;">🔹 GitOps 工作流 (ArgoCD)</li>
+                    <li style="margin-bottom: 8px;">🔹 服务网格 Istio</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>📬 联系方式</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong style="color: #f5576c;">📧 Email</strong><br>
+                        devops@example.com
+                    </div>
+                    <div class="contact-item">
+                        <strong style="color: #f5576c;">💻 GitHub</strong><br>
+                        github.com/k8s-learner
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>💪 持续学习，不断进步 | 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myblog-hugo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myblog
+      component: hugo
+  template:
+    metadata:
+      labels:
+        app: myblog
+        component: hugo
+    spec:
+      containers:
+      - name: hugo
+        image: myblog-hugo:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80

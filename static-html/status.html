@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>集群状态 - 实时监控</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 20px;
+        }
+        .status-card {
+            background: #2d2d2d;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        h1 { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+        .metric { margin: 10px 0; }
+        .label { color: #ffaa00; }
+    </style>
+    <script>
+        // 每 5 秒刷新一次
+        setTimeout(() => location.reload(), 5000);
+    </script>
+</head>
+<body>
+    <h1>🚀 Kubernetes 集群状态</h1>
+    
+    <div class="status-card">
+        <h2>📊 集群信息</h2>
+        <div class="metric">
+            <span class="label">集群名称:</span> Minikube Local
+        </div>
+        <div class="metric">
+            <span class="label">当前时间:</span> <span id="time"></span>
+        </div>
+        <div class="metric">
+            <span class="label">页面刷新:</span> 每 5 秒自动刷新
+        </div>
+    </div>
+    
+    <div class="status-card">
+        <h2>🔗 快速链接</h2>
+        <a href="/" style="color: #00ff00;">← 返回博客首页</a>
+    </div>
+    
+    <script>
+        document.getElementById('time').textContent = new Date().toLocaleString('zh-CN');
+    </script>
+</body>
+</html>

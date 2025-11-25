@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myblog-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2  # 新增
+spec:
+  tls:
+  - hosts:
+    - myblog.local
+    secretName: myblog-tls
+  rules:
+  - host: myblog.local
+    http:
+      paths:
+      # 状态页路由（带正则捕获）
+      - path: /status(/|$)(.*)  # 修改这里
+        pathType: ImplementationSpecific  # 修改这里
+        backend:
+          service:
+            name: myblog-status-service
+            port:
+              number: 80
+      
+      # Hugo 博客（保持不变）
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myblog-hugo-service
+            port:
+              number: 80

@@ -1,0 +1,23 @@
+baseURL = "https://myblog.local/"
+languageCode = "zh-cn"
+title = "我的 Kubernetes 博客"
+theme = "PaperMod"
+[params]
+  description = "基于 Hugo + Kubernetes 的云原生博客"
+  author = "Kubernetes 实践者"
+  
+  [params.homeInfoParams]
+    Title = "🚀 欢迎来到我的博客"
+    Content = "探索云原生技术的奇妙世界"
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3

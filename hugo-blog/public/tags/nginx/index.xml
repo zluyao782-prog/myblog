@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nginx on 我的 Kubernetes 博客</title>
+    <link>http://localhost:1313/tags/nginx/</link>
+    <description>Recent content in Nginx on 我的 Kubernetes 博客</description>
+    <generator>Hugo -- 0.139.4</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 25 Nov 2025 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多页面博客系统上线</title>
+      <link>http://localhost:1313/posts/kubernetes-blog-setup/</link>
+      <pubDate>Tue, 25 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/kubernetes-blog-setup/</guid>
+      <description>&lt;p&gt;今天实现了一个重要的里程碑！我成功地使用 Kubernetes ConfigMap 挂载了多个 HTML 文件，
+现在可以实现真正的多页面导航了。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
